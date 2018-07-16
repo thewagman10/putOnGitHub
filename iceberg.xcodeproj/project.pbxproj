@@ -72,14 +72,78 @@
 			isa = PBXGroup;
 			children = (
 				D2B4A30A20F55703003FE86A /* AppDelegate.swift */,
-				D2B4A30C20F55703003FE86A /* ViewController.swift */,
-				D2B4A30E20F55703003FE86A /* Main.storyboard */,
+				D2B4A31E20FD1B25003FE86A /* Controllers */,
+				D2B4A31F20FD1B4E003FE86A /* Extensions */,
+				D2B4A32020FD1B6A003FE86A /* Helpers */,
+				D2B4A32720FD1BD9003FE86A /* Supporting Files */,
+				D2B4A32220FD1B91003FE86A /* Services */,
+				D2B4A32820FD1BE7003FE86A /* Views */,
+				D2B4A32420FD1BB4003FE86A /* Storyboards */,
+				D2B4A32120FD1B76003FE86A /* Models */,
 				D2B4A31120F55705003FE86A /* Assets.xcassets */,
+			);
+			path = iceberg;
+			sourceTree = "<group>";
+		};
+		D2B4A31E20FD1B25003FE86A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D2B4A30C20F55703003FE86A /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D2B4A31F20FD1B4E003FE86A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D2B4A32020FD1B6A003FE86A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D2B4A32120FD1B76003FE86A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D2B4A32220FD1B91003FE86A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D2B4A32420FD1BB4003FE86A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D2B4A30E20F55703003FE86A /* Main.storyboard */,
 				D2B4A31320F55705003FE86A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D2B4A32720FD1BD9003FE86A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				D2B4A31C20F55735003FE86A /* GoogleService-Info.plist */,
 				D2B4A31620F55705003FE86A /* Info.plist */,
 			);
-			path = iceberg;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2B4A32820FD1BE7003FE86A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D437AC697AC1DAC12210CFB4 /* Pods */ = {
@@ -103,7 +167,7 @@
 				D2B4A30420F55703003FE86A /* Frameworks */,
 				D2B4A30520F55703003FE86A /* Resources */,
 				2EE07608AE241BBFA91FFC64 /* [CP] Embed Pods Frameworks */,
-				221563EE285419F7E7B23D9F /* [CP] Copy Pods Resources */,
+				5971438BD5F0E31DE5396EE0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -162,24 +226,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		221563EE285419F7E7B23D9F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iceberg/Pods-iceberg-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iceberg/Pods-iceberg-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2EE07608AE241BBFA91FFC64 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,6 +248,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iceberg/Pods-iceberg-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5971438BD5F0E31DE5396EE0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iceberg/Pods-iceberg-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iceberg/Pods-iceberg-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EF2B5DDB1F563171951D13B9 /* [CP] Check Pods Manifest.lock */ = {
@@ -376,7 +440,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iceberg/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/iceberg/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,7 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iceberg/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/iceberg/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
