@@ -7,19 +7,31 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseAuth
-import FBSDKLoginKit
+
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var signInSelector: UISegmentedControl!
+    
+    
+    @IBOutlet weak var signInLabel: UILabel!
+    
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
+    @IBOutlet weak var signInButton: UIButton!
+    
+    
+    var isSignIn:Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Adds Login button and puts it on the screen
-        let loginButton = FBSDKLoginButton()
-        view.addSubview(loginButton)
-        //use constraints instead of frames, preferably
-        loginButton.frame = CGRect(x: 16, y: 50, width: view.frame.width - 32, height: 50)
         
     }
 
@@ -28,6 +40,70 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    @IBAction func signInSelectorChanged(_ sender: UISegmentedControl) {
+        
+        //flip the boolean
+        isSignIn = !isSignIn
+        
+        //check the bool and set the button and labels
+        if  isSignIn {
+            signInLabel.text = "Sign In"
+            signInButton.setTitle("Sign In", for: .normal)
+        }
+        else {
+            signInLabel.text = "Register"
+            signInButton.setTitle("Register", for: .normal)
+        }
+    }
+    
+    
+    @IBAction func signInButtonTapped(_ sender: UIButton) {
+        
+        //TO DO: do some form validation on the email and password
+        
+        if let email = emailTextField.text, let pass = passwordTextField.text{
+            
+            //check if it is sign in or register
+            if isSignIn {
+                //sign user in with firebase
+                Auth.auth().signIn(withEmail: email, password: pass) { (user, error) in
+                    
+                    
+                    //check that user isn't nil
+                    if let u = user {
+                        //user is found, go to home screen
+                        self.performSegue(withIdentifier: "goToHome", sender: self)
+                    } else {
+                        //Error: check error and show message
+                    }
+                }
+            }
+            else {
+                //register with firebase
+                Auth.auth().createUser(withEmail: email, password: pass) { (user, error) in
+                    
+                    //check that user isn't nil
+                    if let u = user {
+                        //user is found, go to home screen
+                        self.performSegue(withIdentifier: "goToHome", sender: self)
+                    } else {
+                        //Error: check error and show message
+                    }
+        
+                }
+                
+            }
+            
+        }
+        
+        
+        
+        
+        
+    }
+    
+    
 
 }
 
