@@ -116,7 +116,7 @@
         <scene sceneID="TdP-lo-wYY">
             <objects>
                 <viewController id="Sb8-07-XEc" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="N8s-ec-WYX">
+                    <view key="view" contentMode="scaleToFill" id="N8s-ec-WYX" customClass="AfterLogin">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -126,6 +126,17 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZg-sD-PH3">
+                                <rect key="frame" x="101" y="499" width="172" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="MRU-uf-TQ2" kind="show" id="hzf-Mz-XNP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.63407611846923828" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -138,6 +149,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Whd-vU-qSN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1178" y="9"/>
+        </scene>
+        <!--AnotherViewController-->
+        <scene sceneID="pYZ-o7-ebl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Another" referencedIdentifier="AnotherViewController" id="MRU-uf-TQ2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e4g-LB-CJH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2044" y="11"/>
         </scene>
     </scenes>
 </document>

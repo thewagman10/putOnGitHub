@@ -13,6 +13,9 @@
 		D2B4A31020F55703003FE86A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B4A30E20F55703003FE86A /* Main.storyboard */; };
 		D2B4A31220F55705003FE86A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2B4A31120F55705003FE86A /* Assets.xcassets */; };
 		D2B4A31D20F55735003FE86A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2B4A31C20F55735003FE86A /* GoogleService-Info.plist */; };
+		EA3AD76421124FD900081439 /* Another.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA3AD76321124FD900081439 /* Another.storyboard */; };
+		EA3AD7662112512500081439 /* AnotherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3AD7652112512500081439 /* AnotherViewController.swift */; };
+		EA3AD7682112538800081439 /* AfterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3AD7672112538800081439 /* AfterLogin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		D2B4A31120F55705003FE86A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2B4A31620F55705003FE86A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2B4A31C20F55735003FE86A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EA3AD76321124FD900081439 /* Another.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Another.storyboard; sourceTree = "<group>"; };
+		EA3AD7652112512500081439 /* AnotherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherViewController.swift; sourceTree = "<group>"; };
+		EA3AD7672112538800081439 /* AfterLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +92,9 @@
 		D2B4A31E20FD1B25003FE86A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EA3AD7672112538800081439 /* AfterLogin.swift */,
 				D2B4A30C20F55703003FE86A /* ViewController.swift */,
+				EA3AD7652112512500081439 /* AnotherViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -123,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				D2B4A30E20F55703003FE86A /* Main.storyboard */,
+				EA3AD76321124FD900081439 /* Another.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -215,6 +224,7 @@
 			files = (
 				D2B4A31D20F55735003FE86A /* GoogleService-Info.plist in Resources */,
 				D2B4A31220F55705003FE86A /* Assets.xcassets in Resources */,
+				EA3AD76421124FD900081439 /* Another.storyboard in Resources */,
 				D2B4A31020F55703003FE86A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +309,8 @@
 			files = (
 				D2B4A30D20F55703003FE86A /* ViewController.swift in Sources */,
 				D2B4A30B20F55703003FE86A /* AppDelegate.swift in Sources */,
+				EA3AD7682112538800081439 /* AfterLogin.swift in Sources */,
+				EA3AD7662112512500081439 /* AnotherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
